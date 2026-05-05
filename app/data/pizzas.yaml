@@ -1,0 +1,406 @@
+pizzas:
+  margherita:
+    name: "Margherita"
+    summary: "Klasyczna pizza z sosem pomidorowym, mozzarellą i świeżą bazylią."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - basil
+    price:
+      small: "25.00"
+      medium: "30.00"
+      large: "35.00"
+    spiciness: 0
+    vegetarian: False
+
+  pepperoni:
+    name: "Pepperoni"
+    summary: "Aromatyczna pizza z sosem pomidorowym, mozzarellą i plasterkami pikantnej kiełbasy pepperoni."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - pepperoni
+    price:
+      small: "30.00"
+      medium: "35.00"
+      large: "40.00"
+    spiciness: 2
+    vegetarian: False
+
+  capricciosa:
+    name: "Capricciosa"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, szynką, pieczarkami, karczochami i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - ham
+      - mushroom
+      - artichoke
+      - olives
+    price:
+      small: "32.00"
+      medium: "37.00"
+      large: "42.00"
+    spiciness: 1
+    vegetarian: False
+
+  quattro_formaggi:
+    name: "Quattro Formaggi"
+    summary: "Wyjątkowa pizza z sosem śmietanowym i mieszanką czterech serów: mozzarella, gorgonzola, parmezan, cheddar."
+    description: ""
+    ingredients:
+      - cream
+      - mozzarella
+      - gorgonzola
+      - parmesan
+      - cheddar
+    price:
+      small: "35.00"
+      medium: "40.00"
+      large: "45.00"
+    spiciness: 0
+    vegetarian: True
+
+  vegetariana:
+    name: "Vegetariana"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, cukinią, papryką, pieczarkami, cebulą i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - zucchini
+      - bell_pepper
+      - mushroom
+      - onion
+      - olives
+    price:
+      small: "28.00"
+      medium: "33.00"
+      large: "38.00"
+    spiciness: 0
+    vegetarian: True
+
+  diavola:
+    name: "Diavola"
+    summary: "Pikantna pizza z sosem pomidorowym, mozzarellą, pepperoni, papryczkami jalapeño i cebulą."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - pepperoni
+      - jalapeno
+      - onion
+    price:
+      small: "33.00"
+      medium: "38.00"
+      large: "43.00"
+    spiciness: 3
+    vegetarian: False
+
+  prosciutto_e_rucola:
+    name: "Prosciutto e Rucola"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, szynką parmeńską, rukolą i płatkami parmezanu."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - ham
+      - arugula
+      - parmesan
+    price:
+      small: "37.00"
+      medium: "42.00"
+      large: "47.00"
+    spiciness: 0
+    vegetarian: False
+
+  funghi:
+    name: "Funghi"
+    summary: "Pizza z sosem pomidorowym, mozzarellą i świeżymi pieczarkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - mushroom
+    price:
+      small: "27.00"
+      medium: "32.00"
+      large: "37.00"
+    spiciness: 0
+    vegetarian: True
+
+  frutti_di_mare:
+    name: "Frutti di Mare"
+    summary: "Pizza z sosem pomidorowym, mozzarellą i mieszanką owoców morza: krewetki, małże, kalmary."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - shrimp
+      - mussels
+      - squid
+    price:
+      small: "40.00"
+      medium: "45.00"
+      large: "50.00"
+    spiciness: 1
+    vegetarian: False
+
+  toscana:
+    name: "Toscana"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, salami, cebulą, papryką i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - salami
+      - onion
+      - bell_pepper
+      - olives
+    price:
+      small: "34.00"
+      medium: "39.00"
+      large: "44.00"
+    spiciness: 1
+    vegetarian: False
+
+  napoli:
+    name: "Napoli"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, anchois, kaparami i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - anchovy
+      - capers
+      - olives
+    price:
+      small: "31.00"
+      medium: "36.00"
+      large: "41.00"
+    spiciness: 1
+    vegetarian: False
+
+  carbonara:
+    name: "Carbonara"
+    summary: "Pizza z sosem śmietanowym, mozzarellą, boczkiem, cebulą i parmezanem."
+    description: ""
+    ingredients:
+      - cream
+      - cheese
+      - bacon
+      - onion
+      - parmesan
+    price:
+      small: "36.00"
+      medium: "41.00"
+      large: "46.00"
+    spiciness: 0
+    vegetarian: False
+
+  bufalina:
+    name: "Bufalina"
+    summary: "Pizza z sosem pomidorowym, mozzarellą z mleka bawolego, świeżą bazylią i oliwą z oliwek."
+    description: ""
+    ingredients:
+      - sauce
+      - mozzarella
+      - basil
+      - olive_oil
+    price:
+      small: "38.00"
+      medium: "43.00"
+      large: "48.00"
+    spiciness: 0
+    vegetarian: True
+
+  mexicana:
+    name: "Mexicana"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, mielonym mięsem, czerwoną fasolą, kukurydzą i papryczkami chili."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - ground_meat
+      - corn
+      - chili_pepper
+    price:
+      small: "35.00"
+      medium: "40.00"
+      large: "45.00"
+    spiciness: 3
+    vegetarian: False
+
+  pollo:
+    name: "Pollo"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, grillowanym kurczakiem, pieczarkami i kukurydzą."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - chicken
+      - mushroom
+      - corn
+    price:
+      small: "33.00"
+      medium: "38.00"
+      large: "43.00"
+    spiciness: 1
+    vegetarian: False
+
+  highlander:
+    name: "Highlander"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, oscypkiem, boczkiem i żurawiną."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - smoked_cheese
+      - bacon
+      - cranberries
+    price:
+      small: "39.00"
+      medium: "44.00"
+      large: "49.00"
+    spiciness: 1
+    vegetarian: False
+
+  spinaci:
+    name: "Spinaci"
+    summary: "Pizza z sosem śmietanowym, mozzarellą, szpinakiem, czosnkiem i serem feta."
+    description: ""
+    ingredients:
+      - cream
+      - cheese
+      - spinach
+      - garlic
+      - feta
+    price:
+      small: "32.00"
+      medium: "37.00"
+      large: "42.00"
+    spiciness: 0
+    vegetarian: True
+
+  truffle:
+    name: "Truffle"
+    summary: "Pizza z sosem śmietanowym, mozzarellą, kremem truflowym i grzybami leśnymi."
+    description: ""
+    ingredients:
+      - cream
+      - cheese
+      - truffle
+      - wild_mushrooms
+    price:
+      small: "45.00"
+      medium: "50.00"
+      large: "55.00"
+    spiciness: 1
+    vegetarian: True
+
+  mediterranean:
+    name: "Mediterranean"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, oliwkami, suszonymi pomidorami i rukolą."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - olives
+      - sun_dried_tomatoes
+      - arugula
+    price:
+      small: "30.00"
+      medium: "35.00"
+      large: "40.00"
+    spiciness: 0
+    vegetarian: True
+
+  bbq_chicken:
+    name: "BBQ Chicken"
+    summary: "Pikantna pizza z sosem BBQ, mozzarellą, grillowanym kurczakiem, cebulą i kukurydzą."
+    description: ""
+    ingredients:
+      - bbq_sauce
+      - cheese
+      - chicken
+      - onion
+      - corn
+    price:
+      small: "36.00"
+      medium: "41.00"
+      large: "46.00"
+    spiciness: 2
+    vegetarian: False
+
+  vegan_delight:
+    name: "Vegan Delight"
+    summary: "Pizza z sosem pomidorowym, warzywami, serem roślinnym i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - vegan_cheese
+      - bell_pepper
+      - mushroom
+      - olives
+      - arugula
+    price:
+      small: "28.00"
+      medium: "33.00"
+      large: "38.00"
+    spiciness: 0
+    vegetarian: True
+
+  bacon_cheddar:
+    name: "Bacon & Cheddar"
+    summary: "Pizza z sosem śmietanowym, mozzarellą, boczkiem i serem cheddar."
+    description: ""
+    ingredients:
+      - cream
+      - cheese
+      - bacon
+      - cheddar
+    price:
+      small: "36.00"
+      medium: "41.00"
+      large: "46.00"
+    spiciness: 1
+    vegetarian: False
+
+  spicy_veggie:
+    name: "Spicy Veggie"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, pikantną papryką, papryczkami jalapeño, cebulą i oliwkami."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - bell_pepper
+      - jalapeno
+      - onion
+      - olives
+    price:
+      small: "29.00"
+      medium: "34.00"
+      large: "39.00"
+    spiciness: 2
+    vegetarian: True
+
+  italian_special:
+    name: "Italian Special"
+    summary: "Pizza z sosem pomidorowym, mozzarellą, salami, oliwkami, karczochami i rukolą."
+    description: ""
+    ingredients:
+      - sauce
+      - cheese
+      - salami
+      - olives
+      - artichoke
+      - arugula
+    price:
+      small: "34.00"
+      medium: "39.00"
+      large: "44.00"
+    spiciness: 1
+    vegetarian: False

@@ -1,0 +1,6 @@
+<div class="p-5 mb-6 bg-slate-500 text-center">
+	<div class="text-2xl">{{ pizza.name }}</div>
+  <div>
+		{{ pizza.ingredients | map(attribute='name') | join(', ') }}
+	</div>
+</div>

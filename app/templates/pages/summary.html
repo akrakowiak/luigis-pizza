@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% include "head.html" %}
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/summary.css" rel="stylesheet">
+    <script src="/static/js/summary.js" defer></script>
+</head>
+
+<body class="font-montserrat scroll-smooth bg-gray-100 text-gray-800">
+    <div class="wrapper h-screen overflow-y-auto overflow-x-hidden">
+        {% include "navbar.html" %}
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto">
+                <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">
+                    Co chcesz zrobić?
+                </h1>
+                <div class="mt-4 menu-title w-16 h-1 mx-auto bg-orange"></div>
+
+                <div class="layout-container">
+                    <div class="main-content">
+                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            <!-- Przycisk do Menu -->
+                            <div class="bg-gray-100 border border-gray-200 rounded-lg shadow-md p-6 text-center">
+                                <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                                    Nasze Menu
+                                </h2>
+                                <p class="text-gray-600 mb-6">
+                                    Odkryj wszystkie nasze pyszne pizze i dodatki!
+                                </p>
+                                <a href="/menu" class="summary-button">
+                                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                                    Zobacz Menu
+                                </a>
+                            </div>
+
+                            <!-- Book reservation -->
+                            <div class=" bg-gray-100 border border-gray-200 rounded-lg shadow-md p-6 text-center">
+                                <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                                    Rezerwacja Stolika
+                                </h2>
+                                <p class="text-gray-600 mb-6">
+                                    Wybierz dogodny termin i zarezerwuj stolik.
+                                </p>
+                                <a href="/book" class="summary-button">
+                                    <i class="fa-solid fa-utensils icon"></i>
+                                    Zarezerwuj Stolik
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="mt-8 cart-container">
+                        <div class="cart-header text-2xl font-bold">
+                            Twój Piec
+                        </div>
+                        <div id="cart-items-container" class="cart-items-container empty text-center">
+                            <i class="fa-solid fa-fire-burner text-4xl text-red-500"></i>
+                            <p class="mt-4 text-gray-600">Piec jest pusty. Dodaj pizzę z menu!</p>
+                        </div>
+                        <div id="cart-summary" class="cart-summary mt-auto text-lg font-semibold text-right">
+                            Suma: 0.00 zł
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include "footer.html" %}
+    </div>
+
+</body>
+
+</html>

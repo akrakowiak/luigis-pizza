@@ -1,0 +1,234 @@
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin: 2rem;
+}
+
+.menu-items {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.cart-container {
+    flex: 1;
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 1rem;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 2rem;
+}
+
+.cart-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header .clear-cart-icon {
+    color: #e53e3e;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-items-container.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.cart-items-container.empty i {
+    font-size: 3rem;
+    color: #e53e3e;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-details {
+    flex: 3;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.cart-item-price {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.cart-item-quantity-controls {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+}
+
+.cart-item-quantity-controls button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.cart-item-quantity-controls button:hover {
+    background-color: #ccc;
+}
+
+.cart-item-quantity-controls span {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    min-width: 20px;
+}
+
+.cart-item-remove {
+    color: #e53e3e;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cart-summary {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.order-button {
+    margin-top: 1rem;
+    background-color: #38a169;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background-color: #2f855a;
+}
+
+select {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 0, 0.7);
+    border-color: #FF6F00;
+}
+
+select option {
+    background-color: white;
+    color: #333;
+}
+
+.add-to-cart-button {
+    background-color: #FF6F00;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-cart-button:hover {
+    background-color: #E65C00;
+}
+
+.menu-item-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+/* ICONS */
+.fa-seedling {
+    color: #16A34A;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fa-seedling:hover {
+    transform: scale(1.2);
+}
+
+.fa-pepper-hot {
+    color: #DC2626;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fa-pepper-hot:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% include "head.html" %}
+    <script src="/static/js/book.js" defer></script>
+    <link href="./static/css/main.css" rel="stylesheet">
+    <link href="./static/css/book.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        {% include "navbar.html" %}
+        <div class="container">
+            <div class="image-container">
+                <div class="text-2xl mb-4 font-bold text-center">Plan budynku</div>
+                <img class="restaurant-map" src="/static/img/LuigisPizza2.png" alt="Mapa restauracji">
+            </div>
+
+            <div class="reservation-container">
+                <div class="text-2xl mt-4 font-bold text-center">Wybierz stolik</div>
+                <div class="tables-container">
+                    <div class="table" onclick="onTableClick('T1')">T1</div>
+                    <div class="table" onclick="onTableClick('T2')">T2</div>
+                    <div class="table" onclick="onTableClick('T3')">T3</div>
+                    <div class="table" onclick="onTableClick('T4')">T4</div>
+                    <div class="table" onclick="onTableClick('T5')">T5</div>
+                    <div class="table" onclick="onTableClick('T6')">T6</div>
+                    <div class="table" onclick="onTableClick('T7')">T7</div>
+                    <div class="table" onclick="onTableClick('T8')">T8</div>
+                </div>
+                <div class="text-2xl mb-4 font-bold text-center">Wybierz czas</div>
+                <input type="datetime-local" required id="book-datetime" name="book-datetime" oninput="onDateInput(event)" />
+                    <button type="submit" class="summary-button" onclick="onSubmit(event)"><i class="fa-regular fa-calendar"></i> Rezerwuj</button>
+
+            </div>
+
+        </div>
+
+        {% include "footer.html" %}
+    </div>
+
+    <script>
+        function onTableClick(tableId) {
+            alert(`Wybrano stolik: ${tableId}`);
+        }
+
+        function onDateInput(event) {
+            console.log(`Wybrano datę: ${event.target.value}`);
+        }
+
+        function onSubmit(event) {
+            event.preventDefault();
+            alert("Rezerwacja została wysłana!");
+        }
+    </script>
+</body>
+
+</html>

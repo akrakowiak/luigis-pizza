@@ -1,0 +1,73 @@
+ingredients:
+  sauce:
+    name: "sos"
+  cheese:
+    name: "ser"
+  salami:
+    name: "salami"
+  chicken:
+    name: "kurczak"
+  corn:
+    name: "kukurydza"
+  onion:
+    name: "cebula"
+  mushroom:
+    name: "pieczarki"
+  pepperoni:
+    name: "pepperoni"
+  ham:
+    name: "szynka"
+  olives:
+    name: "oliwki"
+  zucchini:
+    name: "cukinia"
+  bell_pepper:
+    name: "papryka"
+  capers:
+    name: "kapary"
+  anchovy:
+    name: "anchois"
+  bacon:
+    name: "boczek"
+  parmesan:
+    name: "parmezan"
+  mozzarella:
+    name: "mozzarella"
+  arugula:
+    name: "rukola"
+  tomato:
+    name: "pomidor"
+  garlic:
+    name: "czosnek"
+  truffle:
+    name: "trufla"
+  wild_mushrooms:
+    name: "grzyby leśne"
+  smoked_cheese:
+    name: "oscypek"
+  cranberries:
+    name: "żurawina"
+  cream:
+    name: "śmietana"
+  shrimp:
+    name: "krewetki"
+  mussels:
+    name: "małże"
+  squid:
+    name: "kalmar"
+  sun_dried_tomatoes:
+    name: "suszone pomidory"
+  eggplant:
+    name: "bakłażan"
+  bbq_sauce:
+    name: "sos BBQ"
+  vegan_cheese:
+    name: "ser wegański"
+  artichoke:
+    name: "karczoch"
+  cheddar:
+    name: "cheddar"
+  jalapeno:
+    name: "papryczki jalapeño"
+  feta:
+    name: "ser feta"

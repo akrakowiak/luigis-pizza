@@ -1,0 +1,89 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.image-container, .reservation-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 80px;
+}
+
+.restaurant-map {
+    width: 100%;
+    height: auto;
+}
+
+.tables-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.table {
+    height: 60px;
+    width: 60px;
+    background-color: #4b5563;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table:hover {
+    transform: scale(1.1);
+    background-color: #ff6a00;
+}
+
+.summary-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #f97316;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.summary-button:hover {
+    background-color: #e85d0d;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+}

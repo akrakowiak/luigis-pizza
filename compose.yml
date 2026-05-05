@@ -1,0 +1,32 @@
+services:
+  # app:
+  #   build: .
+  #   ports:
+  #     - 8000:8000
+  #   profiles: [dev, prod]
+
+  db:
+    image: postgres:17-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: app
+    networks:
+      - db
+    profiles: [dev, prod]
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080
+    networks:
+      - db
+    profiles: [dev]
+    depends_on:
+      - db
+
+networks:
+  db:

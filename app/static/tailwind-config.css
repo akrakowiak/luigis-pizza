@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #FF6F00;
+  --color-dark: #1E1E1E;
+  --font-montserrat: Montserrat, sans-serif;
+  --shadow-lg-dark: 0 10px 15px -4px rgb(0 0 0 / 0.3), 0 4px 6px -5px rgb(0 0 0 / 0.3);
+}

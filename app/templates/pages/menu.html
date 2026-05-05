@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% include "head.html" %}
+    <link href="./static/css/menu.css" rel="stylesheet">
+    <script src="./static/js/menu_cart.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="font-montserrat scroll-smooth bg-gray-100 text-gray-800">
+
+    {% include "navbar.html" %}
+
+    <template id="pizza-template">
+        <div class="cart-item">
+            <div class="cart-item-details">
+                <div class="cart-item-name">Pizza name (Mała)</div>
+                <div class="cart-item-price">0.00 zł</div>
+            </div>
+            <div class="cart-item-quantity-controls">
+                <button name="Zmniejsz ilość" onclick="decreasePizzaQuantity(event)">-</button>
+                <span class="cart-item-quantity">0</span>
+                <button name="Zwiększ ilość" onclick="increasePizzaQuantity(event)">+</button>
+            </div>
+            <button onclick="clearPizzas(event)">
+                <i class="fa-solid fa-xmark cart-item-remove" aria-hidden="true"></i>
+            </button>
+        </div>
+    </template>
+
+    <template id="cart-empty">
+        <div>
+            <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+            <p>Piec jest pusty. Dodaj pizzę z menu!</p>
+        </div>
+    </template>
+
+    <section id="nasze_menu" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl mt-4 font-bold text-center">Nasze Menu</h2>
+            <div class="menu-title mt-2 w-16 h-1 mx-auto bg-orange"></div>
+            <div class="menu-container">
+                <!-- Menu Items -->
+                <div class="menu-items">
+                    {% for pizza in pizzas %}
+                    <div id="pizza-{{ pizza.id }}"
+                         class="card bg-gray-100 rounded-lg hover:-translate-y-2.5 transition-transform"
+                         data-pizza-id="{{ pizza.id }}"
+                         data-pizza-name="{{ pizza.name }}">
+                        <img src="/static/img/pizza/{{ pizza.id }}.jpg" alt="{{ pizza.name }}" class="rounded-t-lg">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-semibold">{{ pizza.name }}</h3>
+                                <div class="flex items-center space-x-2">
+                                    {% if pizza.vegetarian %}
+                                    <i class="fa-solid fa-seedling" title="Danie wegetariańskie"></i>
+                                    {% endif %}
+
+                                    {% for i in range(pizza.spiciness) %}
+                                    <i class="fa-solid fa-pepper-hot" title="Danie pikantne"></i>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p class="mt-2 text-gray-600">{{ pizza.description }}</p>
+                            <div class="menu-item-controls">
+                                <select class="pizza-size" name="size">
+                                    <option value="small">Mała - {{ "%.2f" | format(pizza.small_price) }} zł</option>
+                                    <option value="medium">Średnia - {{ "%.2f" | format(pizza.medium_price) }} zł</option>
+                                    <option value="large">Duża - {{ "%.2f" | format(pizza.large_price) }} zł</option>
+                                </select>
+                                <button
+                                    class="add-to-cart-button"
+                                    onclick="addToCart(event)">
+                                    Dodaj do pieca
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Cart Section -->
+                <div class="cart-container">
+                    <div class="cart-header">
+                        Twój Piec
+                        <i class="fa-solid fa-trash clear-cart-icon" onclick="clearCart()"></i>
+                    </div>
+                    <div id="cart-items-container" class="cart-items-container empty">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <p>Piec jest pusty. Dodaj pizzę z menu!</p>
+                    </div>
+                    <div id="cart-summary" class="cart-summary">
+                        Suma: 0.00 zł
+                    </div>
+                    <button id="order-button" class="order-button" onclick="placeOrder()">
+                        Składam zamówienie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer.html" %}
+
+</body>
+</html>

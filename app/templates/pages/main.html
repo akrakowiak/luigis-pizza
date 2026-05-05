@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    {% include "head.html" %}
+    <link href="./static/css/main.css" rel="stylesheet">
+</head>
+
+<body class="font-montserrat scroll-smooth bg-gray-100 text-gray-800">
+<div class="wrapper h-screen overflow-y-auto overflow-x-hidden">
+
+    {% include "navbar.html" %}
+
+    <header class="main-page-parallax header h-full bg-cover bg-center flex items-center justify-center relative transform-3d">
+        <div class="main-page-background"></div>
+        <div class="text-center text-white">
+            <h1 class="text-4xl lg:text-6xl font-bold">Luigi's Pizza</h1>
+            <p class="mt-4 text-lg">Poznaj smak prawdziwej włoskiej pizzy</p>
+            <a href="#nasze_specjaly" class="mt-6 inline-block px-6 py-3 border border-white text-white hover:bg-orange hover:border-orange transition">Zobacz nasze specjały</a>
+        </div>
+    </header>
+
+
+    <section id="nasze_specjaly" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Specjały Sezonowe</h2>
+            <div class="mt-2 w-16 h-1 mx-auto bg-orange"></div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for speciality in specialities %}
+                <div class="card bg-gray-100 rounded-lg hover:-translate-y-2.5">
+                    <img src="{{ speciality.image }}" alt="{{ speciality.name }}" class="rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">{{ speciality.name }}</h3>
+                        <p class="mt-2 text-gray-600">{{ speciality.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="menu" class="mt-8 inline-block px-6 py-3 border border-orange text-orange hover:bg-orange hover:text-white transition">Zobacz nasze pełne menu</a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-dark text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Kontakt</h2>
+            <div class="mt-2 w-16 h-1 mx-auto bg-orange"></div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold">Nasza Restauracja</h3>
+                    <p class="mt-2">ul. Płocka 5, 80-560 Gdańsk</p>
+                    <p class="mt-1">Tel: +48 048 048 048</p>
+                    <p class="mt-1">Email: luigispizza@man-smak.pl</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Social Media</h3>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="#" class="hover:text-orange transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-orange transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-orange transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "footer.html" %}
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const navbarLinks = document.getElementById('navbar-links');
+            navbarLinks.classList.toggle('hidden');
+        });
+    </script>
+
+</div>
+</body>
+
+</html>
